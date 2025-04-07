@@ -2,16 +2,35 @@
 //apenas para comparação com o codigo em assembly
 
 int main(){
-    int A[10] = {0,2,4,6,8,10,12,14,16,18};
-    int B[10] = {1,3,5,7,9,11,13,15,17,19};
-    int C[10];
+    int a[10];
+    int b[10];
+    int r[10];
 
-    for(int i=0; i < 10; i++)
-        C[i] = 0;
-    
-    //contador para iteracoes em i
-    //contador para saltos na memoria
+    /*int c = 0;
 
     for (int i = 0; i < 10; i++)
-        C[i] = A[i] + B[i];
+    {
+        a[i] = c;
+        c = c+2;
+    }
+
+    c = 1;
+    for (int i = 0; i < 10; i++)
+    {
+        b[i] = c;
+        c = c+2;
+    }*/
+    //outra ideia
+    int c = 0;
+    for (int i = 0; i < 10; i++)
+    {
+        a[i] = c;
+        c++;
+        b[i] = c;
+        c++;
+        r[i] = a[i] + b[i];
+    }
+
+    for (int i = 0; i < 10; i++)
+        printf("%d ", r[i]);
 }
